@@ -6,9 +6,9 @@ import { ref } from "vue";
 let id = 0;
 const links = [
   { id: id++, txt: "Home", path: "/" },
-  { id: id++, txt: "My Skills", path: "/skills" },
-  { id: id++, txt: "My Projects", path: "/projects" },
-  { id: id++, txt: "Work Experience", path: "/work-experience" },
+  { id: id++, txt: "My Skills", path: "#/skills" },
+  { id: id++, txt: "My Projects", path: "#/projects" },
+  { id: id++, txt: "Work Experience", path: "#/work-experience" },
 ];
 
 const mq = window.matchMedia("(width >= 768px)");
@@ -20,7 +20,7 @@ const isLargeScr = ref(mq.matches);
   <NavItem :class="{ 'desk-nav-style': isLargeScr }">
     <template #list>
       <li v-for="link in links" :key="link.id">
-        <a :to="link.path">
+        <a :href="link.path">
           {{ link.txt }}
         </a>
       </li>

@@ -4,13 +4,13 @@ import NavItem from "./NavItem.vue";
 let id = 0;
 const links = [
   { id: id++, txt: "Home", path: "/" },
-  { id: id++, txt: "My Skills", path: "/skills" },
-  { id: id++, txt: "My Projects", path: "/projects" },
-  { id: id++, txt: "Work Experience", path: "/work-experience" },
-  { id: id++, txt: "Education", path: "/education" },
-  { id: id++, txt: "Honors & Awards", path: "/honors-and-awards" },
-  { id: id++, txt: "Certifications", path: "/certifications" },
-  { id: id++, txt: "Publications", path: "/publications" },
+  { id: id++, txt: "My Skills", path: "#/skills" },
+  { id: id++, txt: "My Projects", path: "#/projects" },
+  { id: id++, txt: "Work Experience", path: "#/work-experience" },
+  { id: id++, txt: "Education", path: "#/education" },
+  { id: id++, txt: "Honors & Awards", path: "#/honors-and-awards" },
+  { id: id++, txt: "Certifications", path: "#/certifications" },
+  { id: id++, txt: "Publications", path: "#/publications" },
 ];
 </script>
 
@@ -18,7 +18,7 @@ const links = [
   <NavItem>
     <template #list>
       <li v-for="link in links" :key="link.id">
-        <a :to="link.path">
+        <a :href="link.path">
           {{ link.txt }}
         </a>
       </li>

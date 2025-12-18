@@ -1,7 +1,7 @@
-import './assets/main.css'
+import "./assets/main.css";
 
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSun } from "@fortawesome/free-solid-svg-icons/faSun";
@@ -32,7 +32,7 @@ library.add(
   faArrowUpRightFromSquare,
 );
 
-const app = createApp(App)
+const app = createApp(App);
 
 app.component("font-awesome-icon", FontAwesomeIcon);
-app.mount('#app')
+app.mount("#app");
