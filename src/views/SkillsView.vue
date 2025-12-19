@@ -1,5 +1,10 @@
 <script setup lang="ts">
+import { skillsKey } from "@/assets/data.types";
 import SkillsComponent from "@/components/SkillsComponent.vue";
+import { provide } from "vue";
+import { skills } from "@/assets/bio.json";
+
+provide(skillsKey, skills);
 </script>
 
 <template>

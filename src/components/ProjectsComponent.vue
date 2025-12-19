@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { inject } from "vue";
 import ProjectsCardComponent from "./ProjectsCardComponent.vue";
-import { projects } from "@/assets/bio.json";
+import { projectsKey } from "@/assets/data.types";
+
+const projects = inject(projectsKey);
 </script>
 
 <template>

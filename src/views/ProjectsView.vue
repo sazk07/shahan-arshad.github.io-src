@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import ProjectsComponent from "@/components/ProjectsComponent.vue";
+import { projects } from "@/assets/bio.json";
+import { provide } from "vue";
+import { projectsKey } from "@/assets/data.types";
+
+provide(projectsKey, projects);
 </script>
 
 <template>
