@@ -34,6 +34,7 @@ export default defineConfigWithVueTs(
           ignoreRestSiblings: true,
         },
       ],
+      "@typescript-eslint/non-nullable-type-assertion-style": "off",
     },
   },
   {

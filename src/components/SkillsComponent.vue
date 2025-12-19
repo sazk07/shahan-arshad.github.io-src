@@ -1,6 +1,10 @@
 <script setup lang="ts">
+import { inject } from "vue";
 import SkillsCardComponent from "./SkillsCardComponent.vue";
-import { skills } from "@/assets/bio.json";
+import { skillsKey } from "@/assets/data.types";
+import type { skillsType } from "@/assets/data.types";
+
+const skills = inject(skillsKey) as skillsType;
 </script>
 
 <template>
