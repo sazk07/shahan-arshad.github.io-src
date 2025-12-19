@@ -29,11 +29,16 @@ window.addEventListener("hashchange", () => {
   currentPath.value = window.location.hash;
 });
 
+function isValidRoute(path: string): path is keyof typeof routes {
+  return path in routes;
+}
+
 const currentView = computed(() => {
+  if (currentPath.value === "") {
+    return routes["/"];
+  }
   const currPathStr = currentPath.value.slice(1);
-  return currPathStr === ""
-    ? routes["/"]
-    : (routes[currPathStr as keyof typeof routes] ?? NotFoundView);
+  return isValidRoute(currPathStr) ? routes[currPathStr] : NotFoundView;
 });
 </script>
 
