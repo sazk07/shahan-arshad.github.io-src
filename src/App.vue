@@ -30,7 +30,10 @@ window.addEventListener("hashchange", () => {
 });
 
 const currentView = computed(() => {
-  return routes[currentPath.value.slice(1) || "/"] ?? NotFoundView;
+  const currPathStr = currentPath.value.slice(1);
+  return currPathStr === ""
+    ? routes["/"]
+    : (routes[currPathStr as keyof typeof routes] ?? NotFoundView);
 });
 </script>
 
